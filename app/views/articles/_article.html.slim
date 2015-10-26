@@ -1,11 +1,12 @@
-tr
-  td
-    = article.title
-  td
-    = article.category
-  td
-    = article.rate
-  td
-    = article.author
-  td
-    = article.created_at
+p
+  tr id="article_#{article.id}"
+    td
+      = article.title
+    td
+      = article.category
+    td
+      = article.rate
+    td
+      = article.author
+    td
+      = convert_date(article.created_at)
