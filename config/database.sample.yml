@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  database: ajax_blog
+  pool: 5
+  username:
+  password:
+
+development:
+  <<: *default
+  database: ajax_development
+
+test: &test
+  <<: *default
+  database: ajax_blog_test
+
+production:
+  <<: *default
