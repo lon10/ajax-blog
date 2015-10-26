@@ -1,0 +1,15 @@
+title Articles
+
+.row
+  = link_to 'create', '#'
+
+thead
+  tr
+    th Title
+    th Category
+    th Rate
+    th Author
+    th Date
+
+tbody
+  = render @articles
