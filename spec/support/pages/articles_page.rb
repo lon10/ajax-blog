@@ -7,11 +7,9 @@ module Pages
     def contains_article?(article)
       displaying_article = @page.find("#article_#{article.id}").text
 
-      #TODO: wtf...
-      displaying_article.include?(article.title) and
-      displaying_article.include?(article.category) and
-      displaying_article.include?(article.author) and
-      displaying_article.include?(article.rate.to_s)
+      # TODO: wtf...
+      expectations = [article.title, article.category, article.author, article.rate.to_s]
+      expectations.map { |exp| displaying_article.include?(exp) }.exclude?(false)
     end
   end
 end
